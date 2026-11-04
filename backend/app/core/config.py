@@ -4,10 +4,13 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+    model_config = SettingsConfigDict(
+        env_file="../.env",
+        extra="ignore"
+    )
 
     environment: str = "development"
-    database_url: str = "postgresql+psycopg://brandshield:brandshield@localhost:5432/brandshield"
+    database_url: str = "postgresql+psycopg://brandshield:brandshield@localhost:5433/brandshield"
     jwt_secret: str = "dev-only-insecure-secret"
     jwt_expire_minutes: int = 60
     cors_origins: str = "http://localhost:5173"

@@ -10,7 +10,8 @@ jobs:
           POSTGRES_USER: brandshield
           POSTGRES_PASSWORD: brandshield
           POSTGRES_DB: brandshield
-        ports: ["5432:5432"]
+        ports:
+          - "5433:5432"
         options: >-
           --health-cmd "pg_isready -U brandshield" --health-interval 5s
           --health-timeout 3s --health-retries 10
