@@ -1,1 +1,0 @@
-Get-Content .\app\core\config.py

@@ -52,3 +52,4 @@ class User(IdTimestampMixin, Base):
         default=True,
         nullable=False,
     )
+    
